@@ -2,12 +2,21 @@
 
 	"use strict";
 
+	/*folloeing code is to get the present date when you open the calendar*/
+
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+
+	today = yyyy + '-' + mm + '-' + dd;
+
 	var options = {
 		events_source: 'events.json.php',
 		view: 'month',
 		tmpl_path: 'tmpls/',
 		tmpl_cache: false,
-		day: '2013-03-12',
+		day: today,
 		onAfterEventsLoad: function(events) {
 			if(!events) {
 				return;

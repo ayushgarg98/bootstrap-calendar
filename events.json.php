@@ -75,3 +75,43 @@
 		}
 	]
 }
+
+<!-- To get this data(title of the event, url, startDate of the event, End Date of the event) from the databse you can use the following code as well. It will be commented. If you wish to do it like this use the following code.  It is a PHP code-->
+
+<!-- <?php
+	/*$db = ''; //!!!!----name of the database----!!!!
+	$username = '';
+	$password = '';
+	$host = 'localhost';
+	$mysqli = new mysqli($host, $username, $password, $db);
+	$mysqli->query("SET NAMES 'utf8'");
+
+	if ($mysqli->connect_errno) 
+	{
+		echo "Error de conexion: (" . $mysqli->connect_errno .") " . $mysqli->connect_error;
+	}
+
+    $sqlEvents = "SELECT * FROM <tableName> LIMIT 20";
+   
+    $sql = $mysqli->query($sqlEvents);
+    while($row = $sql->fetch_array(MYSQLI_ASSOC)){
+        $start = strtotime($row['start_date']) * 1000;
+        $end = strtotime($row['end_date']) * 1000; 
+        $description = $row['description'];
+        $name = $row['title'];
+        $title = $name.' Starts: '.$row['start_date'].', Ends: '.$row['end_date'].' -- Brief Discription: '.$description;
+        $calendar[] = Array(
+            'id' =>$row['id'],
+            'title' => "$title",
+            'url' => "#",
+            "class" => 'event-important',     //!!!!----this can also be taken from the databse----!!!!
+            'start' => "$start",
+            'end' => "$end"
+        );
+    }
+    $calendarData = Array(
+    	"success" => 1,	
+        "result"=>$calendar);
+    echo json_encode($calendarData);
+    exit;*/
+?> -->
